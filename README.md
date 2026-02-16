@@ -16,8 +16,6 @@ It started as a small test project and grew into a clean, practical calculator w
 
 ## Screenshot
 
-Add a screenshot here after you create it:
-
 ![Jan's Calculator screenshot](docs/screenshots/app.png)
 
 ## Requirements
@@ -30,33 +28,39 @@ Add a screenshot here after you create it:
 
 From the project root, run:
 
+```bash
 ./gradlew :app:assembleDebug
+```
 
 APK output:
 
-app/build/outputs/apk/debug/app-debug.apk
+`app/build/outputs/apk/debug/app-debug.apk`
 
 ## Install on a device (ADB)
 
 Enable Developer options + USB debugging on your phone, then run:
 
+```bash
 adb devices
 adb install -r app/build/outputs/apk/debug/app-debug.apk
+```
 
 If more than one device/emulator is connected:
 
+```bash
 adb -s <DEVICE_ID> install -r app/build/outputs/apk/debug/app-debug.apk
+```
 
 ## Project Structure (high level)
 
-- app/ – Android app module
-- app/src/main/java/.../MainActivity.kt – main Compose UI and calculator logic
-- app/src/main/res/ – resources (launcher icon, strings, themes, etc.)
+- `app/` – Android app module
+- `app/src/main/java/.../MainActivity.kt` – main Compose UI and calculator logic
+- `app/src/main/res/` – resources (launcher icon, strings, themes, etc.)
 
 ## Notes
 
-- The app label is set via @string/app_name in app/src/main/res/values/strings.xml.
-- Launcher icons are generated under app/src/main/res/mipmap-* (often as .webp).
+- The app label is set via `@string/app_name` in `app/src/main/res/values/strings.xml`.
+- Launcher icons are generated under `app/src/main/res/mipmap-*` (often as `.webp`).
 
 ## License
 
